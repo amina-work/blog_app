@@ -80,4 +80,49 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.nav__logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.nav__items {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.nav__profile {
+  position: relative;
+  cursor: pointer;
+}
+.nav__profile:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+.nav__profile ul {
+  position: absolute;
+  top: 140%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.nav__profile ul li a {
+  padding: 1rem;
+  background: #1e1e66;
+  display: block;
+  width: 100%;
+}
+.nav__profile ul li:last-child a {
+  background: #da0f3f;
+  color: #0f0f3e;
+}
+.nav__profile .avatar img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.3rem solid #0f0f3e;
 }/*# sourceMappingURL=styles.css.map */
