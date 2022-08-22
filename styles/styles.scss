@@ -41,7 +41,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     line-height: 1.6;
-    color: $gray9Clr;
+    color: $gray2Clr;
     overflow-x: hidden;
     background: $bgClr;
 
@@ -163,5 +163,64 @@ section{
             overflow: hidden;
             border: 0.3rem solid $bgClr;
         }
+    }
+}
+
+/* Category btn */
+.category__button{
+    background: $primaryLightClr;
+    color: $primaryClr;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: $cardBR2;
+    font-style: 600;
+    font-size: 0.8rem;
+    text-align: center;
+
+    &:hover{
+        color: $whiteClr;
+    }
+}
+
+/* Post Style*/
+.post{
+
+    &:hover{
+        &__thumbail img{
+            filter: saturate(0);
+            transition: filter 500ms ease-in-out;
+        }
+    }
+    &__thumbail{
+        border-radius: $cardBR5 0;
+        border: 1rem solid $gray9Clr;
+        overflow: hidden;
+        margin-bottom: 1.6rem;
+    }
+    &__author{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+    &__author-avatar img{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: $cardBR3;
+        overflow: hidden;
+    }
+}
+
+/* Featured Section */
+.featured{
+    margin-top: 8rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .post__thumbail{
+        height: fit-content;
     }
 }

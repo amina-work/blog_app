@@ -17,7 +17,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #1e1e66;
+  color: rgba(242, 242, 254, 0.7);
   overflow-x: hidden;
   background: #0f0f3e;
 }
@@ -125,4 +125,57 @@ section {
   border-radius: 50%;
   overflow: hidden;
   border: 0.3rem solid #0f0f3e;
+}
+
+/* Category btn */
+.category__button {
+  background: hsla(242deg, 91%, 69%, 0.18);
+  color: #6f6af8;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-style: 600;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.category__button:hover {
+  color: #f2f2fe;
+}
+
+/* Post Style*/
+.post:hover__thumbail img {
+  filter: saturate(0);
+  transition: filter 500ms ease-in-out;
+}
+.post__thumbail {
+  border-radius: 5rem 0;
+  border: 1rem solid #1e1e66;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+.post__author {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.post__author-avatar img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+/* Featured Section */
+.featured {
+  margin-top: 8rem;
+}
+.featured__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.featured .post__thumbail {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }/*# sourceMappingURL=styles.css.map */
