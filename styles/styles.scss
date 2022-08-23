@@ -166,7 +166,18 @@ section{
     }
 }
 
-/* Category btn */
+/* Category btns */
+.category-buttons{
+    padding: 4rem 0;
+    border-top: 2px solid $gray9Clr;
+    border-bottom: 2px solid $gray9Clr;
+    &__container{
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
 .category__button{
     background: $primaryLightClr;
     color: $primaryClr;
@@ -182,15 +193,26 @@ section{
     }
 }
 
-/* Post Style*/
+/* Posts */
+.posts{
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        margin-bottom: 5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
 .post{
-
-    &:hover{
-        &__thumbail img{
+    &__thumbail img{
+        &:hover{
             filter: saturate(0);
             transition: filter 500ms ease-in-out;
         }
     }
+
     &__thumbail{
         border-radius: $cardBR5 0;
         border: 1rem solid $gray9Clr;
@@ -222,5 +244,71 @@ section{
 
     .post__thumbail{
         height: fit-content;
+        img:hover{
+            filter: none;
+        }
+    }
+}
+
+/* Footer */
+.footer{
+    background: $gray9Clr;
+    padding: 5rem 0 0;
+    box-shadow: inset 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
+
+    &__socials{
+        margin-inline: auto;
+        width: fit-content;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+
+        a{
+            background: $bgClr;
+            border-radius: 50%;
+            width: 2.3rem;
+            height: 2.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                background: $whiteClr;
+                color: $bgClr;
+            }
+        }
+    }
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h4{
+        color: $whiteClr;
+        margin-bottom: 0.6rem;
+    }
+
+    ul{
+        li{
+            padding: 0.4rem 0;
+        }
+        a{
+            opacity: 0.75;
+    
+            &:hover{
+                letter-spacing: 0.2rem;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__copyright{
+        text-align: center;
+        padding: 1.5rem 0;
+        border-top: 2px solid $bgClr;
+        margin-top: 4rem;
     }
 }
