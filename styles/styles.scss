@@ -89,6 +89,8 @@ section{
     width: 100vw;
 }
 
+/*========== HOME PAGE ==========*/
+
 /* NAV */
 .nav{
     background: $primaryClr;
@@ -314,8 +316,84 @@ section{
 }
 
 
+/*========== BLOG PAGE ==========*/
+/*search bar*/
+.search-bar{
+    margin-top: 7rem;
 
-/* Media Queries */
+    &__container{
+        position: relative;
+        width: 30rem;
+        background: $gray9Clr;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 0.6rem 1rem;
+        border-radius: $cardBR2;
+        color: $gray3Clr;
+
+        > div{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    input{
+        background: transparent;
+        margin-left: 0.7rem;
+        padding: 0.5rem 0;
+        width: 100%;
+
+        &::placeholder{
+            color: $gray3Clr;
+        }
+    }
+}
+
+/*Buttons*/
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background: $primaryClr;
+    border-radius: $cardBR2;
+    cursor: pointer;
+    transition: $transition;
+    color: $whiteClr;
+}
+
+/*========== SinglePost ==========*/
+.singlepost{
+    margin: 6rem 0 2rem;
+
+    &__container{
+        width: $formWidth;
+        background: $gray9Clr;
+        padding: 1rem 2rem 3rem;
+
+        p{
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    &__thumbnail{
+        margin: 1.5rem 0 1rem;
+    }
+}
+
+/*==========   CATEGORIES PAGE ==========*/
+.category__title{
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: $gray9Clr;
+    display: grid;
+    place-items: center;
+}
+
+/*========== Media Queries ==========*/
 
 //Tablets
 @media screen and (max-width: 1024px){
@@ -440,6 +518,13 @@ section{
             gap: 3rem;
         }
     }
+
+    /*Blog search bar*/
+    .search-bar{
+        &__container{
+            width: 60%;
+        }
+    }
 }
 
 //Mobile
@@ -456,6 +541,21 @@ section{
         &__container{
             grid-template-columns: 1fr;
             gap: 0;
+        }
+    }
+
+    /*Blog search bar*/
+    .search-bar{
+        &__container{
+            width: $middleWidth;
+        }
+    }
+
+    /*Singlepost*/
+    .singlepost{
+        &__container{
+            background-color: transparent;
+            padding: 0;
         }
     }
 }
