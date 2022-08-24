@@ -312,3 +312,124 @@ section{
         margin-top: 4rem;
     }
 }
+
+
+
+/* Media Queries */
+
+//Tablets
+@media screen and (max-width: 1024px){
+    /*General*/
+    .container{
+        width: $middleWidth;
+    }
+
+    h2{font-size: 1.6rem;}
+    h3{font-size: 1.2rem;}
+    h5{font-size: 0.8rem;}
+
+    /* NAV */
+    .nav{
+        button{
+            display: inline-block;
+            font-size: 1.5rem;
+            background: transparent;
+            color: $whiteClr;
+            cursor: pointer;
+        }
+        button#close__nav-btn{
+            display: none;
+        }
+
+        &__container{
+            position: relative;
+        }
+
+        &__items{
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            right: 0;
+            width: 12rem;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0;
+            display: none;
+
+            li{
+                width: 100%;
+                height: 4.5rem;
+                display: flex;
+                align-items: center;
+                box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+                background: $gray9Clr;
+                border-top: 1px solid $bgClr;
+                animation: animateDropdown 400ms 0s ease-in-out forwards;
+                opacity: 0;
+                transform-origin: top; //flipping from top
+
+                &:nth-child(2){
+                    animation-delay: 200ms;
+                }
+                &:nth-child(3){
+                    animation-delay: 400ms;
+                }
+                &:nth-child(4){
+                    animation-delay: 600ms;
+                }
+                &:nth-child(5){
+                    animation-delay: 800ms;
+                }
+
+                a{
+                    border-radius: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $gray9Clr;
+                    padding: 0 2rem;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__profile{
+            background: $gray9Clr;
+
+            ul{
+                top: 100%;
+                width: 100%;
+            }
+
+            .avatar{
+                margin-left: 2rem;
+                border: 0;
+            }
+        }
+    }
+
+    @keyframes animateDropdown {
+        0%{
+            transform: rotateX(90deg);
+        }
+        100%{
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    /*Featured*/
+    .featured{
+        &__container{
+            gap: 3rem;
+        }
+    }
+
+    /*Posts*/
+    .posts{
+        &__container{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+    }
+}

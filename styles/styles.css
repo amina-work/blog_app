@@ -260,4 +260,122 @@ section {
   padding: 1.5rem 0;
   border-top: 2px solid #0f0f3e;
   margin-top: 4rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  /*General*/
+  .container {
+    width: 88%;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 0.8rem;
+  }
+  /* NAV */
+  .nav button {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: transparent;
+    color: #f2f2fe;
+    cursor: pointer;
+  }
+  .nav button#close__nav-btn {
+    display: none;
+  }
+  .nav__container {
+    position: relative;
+  }
+  .nav__items {
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 12rem;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    display: none;
+  }
+  .nav__items li {
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+    background: #1e1e66;
+    border-top: 1px solid #0f0f3e;
+    -webkit-animation: animateDropdown 400ms 0s ease-in-out forwards;
+            animation: animateDropdown 400ms 0s ease-in-out forwards;
+    opacity: 0;
+    transform-origin: top;
+  }
+  .nav__items li:nth-child(2) {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+  }
+  .nav__items li:nth-child(3) {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+  }
+  .nav__items li:nth-child(4) {
+    -webkit-animation-delay: 600ms;
+            animation-delay: 600ms;
+  }
+  .nav__items li:nth-child(5) {
+    -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
+  }
+  .nav__items li a {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e66;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+  }
+  .nav__profile {
+    background: #1e1e66;
+  }
+  .nav__profile ul {
+    top: 100%;
+    width: 100%;
+  }
+  .nav__profile .avatar {
+    margin-left: 2rem;
+    border: 0;
+  }
+  @-webkit-keyframes animateDropdown {
+    0% {
+      transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes animateDropdown {
+    0% {
+      transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  /*Featured*/
+  .featured__container {
+    gap: 3rem;
+  }
+  /*Posts*/
+  .posts__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
