@@ -62,7 +62,7 @@ section {
   width: 100vw;
 }
 
-/*========== HOME PAGE ==========*/
+/*================================================================================ HOME PAGE ====================================================================================================*/
 /* NAV */
 .nav {
   background: #6f6af8;
@@ -263,7 +263,7 @@ section {
   margin-top: 4rem;
 }
 
-/*========== BLOG PAGE ==========*/
+/*================================================================================ BLOG PAGE ====================================================================================================*/
 /*search bar*/
 .search-bar {
   margin-top: 7rem;
@@ -315,7 +315,7 @@ section {
   color: #f2f2fe;
 }
 
-/*========== SinglePost ==========*/
+/*================================================================================ SINGLEPOST PAGE ====================================================================================================*/
 .singlepost {
   margin: 6rem 0 2rem;
 }
@@ -341,7 +341,78 @@ section {
   place-items: center;
 }
 
-/*========== Media Queries ==========*/
+/*================================================================================ ABOUT PAGE ====================================================================================================*/
+.about {
+  margin: 7rem 0 2rem;
+}
+.about__container {
+  width: 88%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 3px solid #1e1e66;
+  border-bottom: 3px solid #1e1e66;
+}
+.about__left {
+  padding: 2.4rem;
+}
+.about__left p {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+.about__right {
+  padding: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*================================================================================ CONTACT PAGE ====================================================================================================*/
+.contact {
+  margin: 7rem 0 2rem;
+}
+.contact__title {
+  text-align: center;
+  margin: 2rem auto;
+  color: rgba(242, 242, 254, 0.7);
+}
+.contact__container {
+  width: 40%;
+  background: #1e1e66;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact__form .name {
+  display: flex;
+  gap: 1.2rem;
+}
+.contact__form input[type=text] {
+  width: 50%;
+  border-radius: 0.5rem;
+}
+.contact__form input, .contact__form textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #0f0f3e;
+  color: #f2f2fe;
+  border-radius: 0.5rem;
+}
+
+/*================================================================================ MEDIA QUERIES ====================================================================================================*/
 @media screen and (max-width: 1024px) {
   /*General*/
   .container {

@@ -89,7 +89,9 @@ section{
     width: 100vw;
 }
 
-/*========== HOME PAGE ==========*/
+
+
+/*================================================================================ HOME PAGE ====================================================================================================*/
 
 /* NAV */
 .nav{
@@ -316,7 +318,9 @@ section{
 }
 
 
-/*========== BLOG PAGE ==========*/
+
+/*================================================================================ BLOG PAGE ====================================================================================================*/
+
 /*search bar*/
 .search-bar{
     margin-top: 7rem;
@@ -364,7 +368,10 @@ section{
     color: $whiteClr;
 }
 
-/*========== SinglePost ==========*/
+
+
+/*================================================================================ SINGLEPOST PAGE ====================================================================================================*/
+
 .singlepost{
     margin: 6rem 0 2rem;
 
@@ -393,7 +400,91 @@ section{
     place-items: center;
 }
 
-/*========== Media Queries ==========*/
+
+
+/*================================================================================ ABOUT PAGE ====================================================================================================*/
+.about{
+    margin: 7rem 0 2rem;
+
+    &__container{
+        width: $middleWidth;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__intro{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        border-top: 3px solid $gray9Clr;
+        border-bottom: 3px solid $gray9Clr;
+    }
+    
+    &__left{
+        padding: 2.4rem;
+        p{
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+    }
+    &__right{
+        padding: 2.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+/*================================================================================ CONTACT PAGE ====================================================================================================*/
+.contact{
+    margin: 7rem 0 2rem;
+
+    &__title{
+        text-align: center;
+        margin: 2rem auto;
+        color: $gray2Clr;
+    }
+
+    &__container{
+        width: $formWidth;
+        background: $gray9Clr;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $cardBR1;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        
+        .name{
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        input[type="text"]{
+            width: 50%;
+            border-radius: $cardBR2;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 1rem;
+            background: $bgClr;
+            color: $whiteClr;
+            border-radius: $cardBR2;
+        }
+    }
+}
+
+
+/*================================================================================ MEDIA QUERIES ====================================================================================================*/
 
 //Tablets
 @media screen and (max-width: 1024px){
