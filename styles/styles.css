@@ -19,10 +19,10 @@ body {
   line-height: 1.6;
   color: rgba(242, 242, 254, 0.7);
   overflow-x: hidden;
-  background: #0f0f3e;
+  background: #E6F6F0;
 }
 body h1, body h2, body h3, body h4, body h5 {
-  color: #f2f2fe;
+  color: #00110B;
   line-height: 1.3;
 }
 body h1 {
@@ -41,7 +41,7 @@ body h4 {
   font-size: 1rem;
 }
 body a {
-  color: #f2f2fe;
+  color: #00110B;
   transition: all 300ms ease-in-out;
 }
 body img {
@@ -65,7 +65,7 @@ section {
 /*================================================================================ HOME PAGE ====================================================================================================*/
 /* NAV */
 .nav {
-  background: #6f6af8;
+  background: #00A86B;
   width: 100vw;
   height: 4.5rem;
   position: fixed;
@@ -112,27 +112,27 @@ section {
 }
 .nav__profile ul li a {
   padding: 1rem;
-  background: #1e1e66;
+  background: #A80091;
   display: block;
   width: 100%;
 }
 .nav__profile ul li:last-child a {
   background: #da0f3f;
-  color: #0f0f3e;
+  color: #E6F6F0;
 }
 .nav__profile .avatar img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 0.3rem solid #0f0f3e;
+  border: 0.3rem solid #E6F6F0;
 }
 
 /* Category btns */
 .category-buttons {
   padding: 4rem 0;
-  border-top: 2px solid #1e1e66;
-  border-bottom: 2px solid #1e1e66;
+  border-top: 2px solid #A80091;
+  border-bottom: 2px solid #A80091;
 }
 .category-buttons__container {
   width: -webkit-fit-content;
@@ -145,7 +145,7 @@ section {
 
 .category__button {
   background: hsla(242deg, 91%, 69%, 0.18);
-  color: #6f6af8;
+  color: #00A86B;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -154,7 +154,7 @@ section {
   text-align: center;
 }
 .category__button:hover {
-  color: #f2f2fe;
+  color: #00110B;
 }
 
 /* Posts */
@@ -174,7 +174,7 @@ section {
 }
 .post__thumbail {
   border-radius: 5rem 0;
-  border: 1rem solid #1e1e66;
+  border: 1rem solid #A80091;
   overflow: hidden;
   margin-bottom: 1.6rem;
 }
@@ -210,7 +210,7 @@ section {
 
 /* Footer */
 .footer {
-  background: #1e1e66;
+  background: #A80091;
   padding: 5rem 0 0;
   box-shadow: inset 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
 }
@@ -226,7 +226,7 @@ section {
   gap: 1.2rem;
 }
 .footer__socials a {
-  background: #0f0f3e;
+  background: #E6F6F0;
   border-radius: 50%;
   width: 2.3rem;
   height: 2.3rem;
@@ -235,15 +235,15 @@ section {
   justify-content: center;
 }
 .footer__socials a:hover {
-  background: #f2f2fe;
-  color: #0f0f3e;
+  background: #00110B;
+  color: #E6F6F0;
 }
 .footer__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 .footer h4 {
-  color: #f2f2fe;
+  color: #00110B;
   margin-bottom: 0.6rem;
 }
 .footer ul li {
@@ -259,7 +259,7 @@ section {
 .footer__copyright {
   text-align: center;
   padding: 1.5rem 0;
-  border-top: 2px solid #0f0f3e;
+  border-top: 2px solid #E6F6F0;
   margin-top: 4rem;
 }
 
@@ -271,7 +271,7 @@ section {
 .search-bar__container {
   position: relative;
   width: 30rem;
-  background: #1e1e66;
+  background: #A80091;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -308,11 +308,11 @@ section {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.6rem 1.2rem;
-  background: #6f6af8;
+  background: #00A86B;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 300ms ease-in-out;
-  color: #f2f2fe;
+  color: #00110B;
 }
 
 /*================================================================================ SINGLEPOST PAGE ====================================================================================================*/
@@ -321,7 +321,7 @@ section {
 }
 .singlepost__container {
   width: 40%;
-  background: #1e1e66;
+  background: #A80091;
   padding: 1rem 2rem 3rem;
 }
 .singlepost__container p {
@@ -336,7 +336,7 @@ section {
 .category__title {
   height: 15rem;
   margin-top: 4.5rem;
-  background: #1e1e66;
+  background: #A80091;
   display: grid;
   place-items: center;
 }
@@ -356,8 +356,8 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
-  border-top: 3px solid #1e1e66;
-  border-bottom: 3px solid #1e1e66;
+  border-top: 3px solid #A80091;
+  border-bottom: 3px solid #A80091;
 }
 .about__left {
   padding: 2.4rem;
@@ -384,7 +384,7 @@ section {
 }
 .contact__container {
   width: 40%;
-  background: #1e1e66;
+  background: #A80091;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -407,8 +407,8 @@ section {
 .contact__form input, .contact__form textarea {
   width: 100%;
   padding: 1rem;
-  background: #0f0f3e;
-  color: #f2f2fe;
+  background: #E6F6F0;
+  color: #00110B;
   border-radius: 0.5rem;
 }
 
@@ -432,7 +432,7 @@ section {
     display: inline-block;
     font-size: 1.5rem;
     background: transparent;
-    color: #f2f2fe;
+    color: #00110B;
     cursor: pointer;
   }
   .nav button#close__nav-btn {
@@ -458,8 +458,8 @@ section {
     display: flex;
     align-items: center;
     box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
-    background: #1e1e66;
-    border-top: 1px solid #0f0f3e;
+    background: #A80091;
+    border-top: 1px solid #E6F6F0;
     -webkit-animation: animateDropdown 400ms 0s ease-in-out forwards;
             animation: animateDropdown 400ms 0s ease-in-out forwards;
     opacity: 0;
@@ -485,13 +485,13 @@ section {
     border-radius: 0;
     width: 100%;
     height: 100%;
-    background: #1e1e66;
+    background: #A80091;
     padding: 0 2rem;
     display: flex;
     align-items: center;
   }
   .nav__profile {
-    background: #1e1e66;
+    background: #A80091;
   }
   .nav__profile ul {
     top: 100%;
