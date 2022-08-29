@@ -57,6 +57,6 @@
     </footer>
 
     <!--JS-->
-    <script src="./js/app.js"></script>
+    <script src="<?= ROOT_URL ?>js/app.js"></script>
 </body>
 </html>

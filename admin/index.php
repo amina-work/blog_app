@@ -2,7 +2,6 @@
 include 'partials/header.php';
 ?>
 
-
     <!--Dashboard-->
     <section class="dashboard">
         <div class="container dashboard__container">
@@ -17,7 +16,7 @@ include 'partials/header.php';
                         </a>
                     </li> <!--End item 1-->
                     <li>
-                        <a href="index.php">
+                        <a href="index.php" class="active">
                             <i class="uil uil-postcard"></i>
                             <h5>Manage Posts</h5>
                         </a>
@@ -29,7 +28,7 @@ include 'partials/header.php';
                         </a>
                     </li> <!--End item 3-->
                     <li>
-                        <a href="manage-users.php" class="active">
+                        <a href="manage-users.php">
                             <i class="uil uil-users-alt"></i>
                             <h5>Manage User</h5>
                         </a>
@@ -53,42 +52,43 @@ include 'partials/header.php';
                 <table>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Username</th>
+                            <th>Title</th>
+                            <th>Category</th>
                             <th>Edit</th>
                             <th>Delete</th>
-                            <th>Admin</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Ernest Frowl</td>
-                            <td>ufrowl</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td>Lorem ipsum dolor sit amet consectetur elit.</td>
+                            <td>Wild Life</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>Yes</td>
                         </tr> <!--End item 1-->
                         <tr>
-                            <td>Forest Gump</td>
-                            <td>therunner</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Art</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>No</td>
                         </tr> <!--End item 2-->
                         <tr>
-                            <td>Catlyn Stark</td>
-                            <td>stoneheart</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Science & Tecknology</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>Yes</td>
                         </tr> <!--End item 3-->
                         <tr>
-                            <td>Albert Frank</td>
-                            <td>frankalb</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Art</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>Yes</td>
                         </tr> <!--End item 4-->
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Travail</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
+                        </tr> <!--End item 5-->
                     </tbody>
                 </table>
             </main>

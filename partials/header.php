@@ -13,7 +13,7 @@ require 'config/database.php';
     <title>Responsive Multipage Blog Application</title>
     
     <!-- SASS Style-->
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>styles/styles.css?v=<?php echo time(); ?>">
 
     <!-- Iconscout cdn-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
@@ -28,20 +28,20 @@ require 'config/database.php';
     <!-- Navigation Bar -->
     <nav class="nav">
         <div class="container nav__container">
-            <a href="index.php" class="nav__logo">Blogs.</a>
+            <a href="<?= ROOT_URL ?>" class="nav__logo">Blogs.</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <!--<li><a href="signin.html">Sign in</a></li>-->
+                <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
+                <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
+                <li><a href="<?= ROOT_URL ?> contact.php">Contact</a></li>
+                <!--<li><a href="<?= ROOT_URL ?>signin.html">Sign in</a></li>-->
                 <li class="nav__profile">
                     <div class="avatar">
                         <img src="./images/avatar1.png" alt="">
                     </div>
                     <ul>
-                        <li><a href="partials/dashboard.php">Dashboard</a></li>
-                        <li><a href="logout.php">Log Out</a></li>
+                        <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
+                        <li><a href="<?= ROOT_URL ?>logout.php">Log Out</a></li>
                     </ul>
                 </li>
             </ul>

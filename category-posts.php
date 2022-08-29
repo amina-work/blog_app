@@ -15,8 +15,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -37,8 +37,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -59,8 +59,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -81,8 +81,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -103,8 +103,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -125,8 +125,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -147,8 +147,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -169,8 +169,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -191,8 +191,8 @@ include 'partials/header.php'
                     <img src="./images/post1.jpeg" alt="">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.html">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">How to stop friends from sending voice messages all the time</a></h3>
+                    <a class="category__button" href="category-posts.php">Wild Life</a>
+                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
                         sunt nihil tempora nesciunt accusantium alias esse obcaecati.
@@ -214,73 +214,15 @@ include 'partials/header.php'
     <!--Categories-->
     <section class="category-buttons">
         <div class="container category-buttons__container">
-            <a href="category-posts.html" class="category__button">Wild Life</a>
-            <a href="category-posts.html" class="category__button">Travel</a>
-            <a href="category-posts.html" class="category__button">Art</a>
-            <a href="category-posts.html" class="category__button">Food</a>
-            <a href="category-posts.html" class="category__button">Music</a>
-            <a href="category-posts.html" class="category__button">Science & Tecknology</a>
+            <a href="category-posts.php" class="category__button">Wild Life</a>
+            <a href="category-posts.php" class="category__button">Travel</a>
+            <a href="category-posts.php" class="category__button">Art</a>
+            <a href="category-posts.php" class="category__button">Food</a>
+            <a href="category-posts.php" class="category__button">Music</a>
+            <a href="category-posts.php" class="category__button">Science & Tecknology</a>
         </div>
     </section>
 
-    <!--Footer-->
-    <footer class="footer">
-        <div class="footer__socials">
-            <a href="https://youtube.com" target="_blank"><i class="uil uil-youtube"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="uil uil-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram-alt"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter"></i></a>
-        </div>
-        <div class="container footer__container">
-            <article>
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="">Wild Life</a></li>
-                    <li><a href="">Travel</a></li>
-                    <li><a href="">Art</a></li>
-                    <li><a href="">Food</a></li>
-                    <li><a href="">Music</a></li>
-                    <li><a href="">Science & Tecknology</a></li>
-                </ul>
-            </article> <!--End item 1-->
-            <article>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="">Online Support</a></li>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Emails</a></li>
-                    <li><a href="">Social Support</a></li>
-                    <li><a href="">Location</a></li>
-                </ul>
-            </article> <!--End item 2-->
-            <article>
-                <h4>Blog</h4>
-                <ul>
-                    <li><a href="">Safety</a></li>
-                    <li><a href="">Repair</a></li>
-                    <li><a href="">Recent</a></li>
-                    <li><a href="">Popular</a></li>
-                    <li><a href="">Categories</a></li>
-                </ul>
-            </article> <!--End item 3-->
-            <article>
-                <h4>Permalinks</h4>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </article> <!--End item 4-->
-        </div>
-        <div class="footer__copyright">
-            <small>Copyright &copy; 2022 Blogs.</small>
-        </div>
-    </footer>
-
-    <!--JS-->
-    <script src="./app.js"></script>
-</body>
-</html>
+<?php
+include 'partials/footer.php'
+?>
