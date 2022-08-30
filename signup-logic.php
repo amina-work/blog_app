@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config/database.php';
 
 //get signup from data if signup button was clicked
@@ -75,6 +76,14 @@ if(isset($_POST['submit'])){ //if the submit was clicked
         die();
     } else{
         //insert new user to users table
+        $insert_user_query = "INSERT INTO users (firstname, lastname, username, email, password, avatar, is_admin) VALUES('$firstname', '$lastname', '$username', '$email', '$hashed__password', '$avatar_name', 0)";//columns from the users table
+
+        if(!mysqli_errno($connection)) {
+            //redirect to login page sucess message
+            $_SESSION['signup-success'] = "Registration successful, please log in your account";
+            header('location: ' . ROOT_URL . 'signin.php');
+            die();
+        }
     }
     
 } else {
