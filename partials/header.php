@@ -1,6 +1,5 @@
 <?php
 require 'config/database.php';
-
 ?>
 
 
@@ -28,22 +27,25 @@ require 'config/database.php';
     <!-- Navigation Bar -->
     <nav class="nav">
         <div class="container nav__container">
-            <a href="<?= ROOT_URL ?>" class="nav__logo">Blogs.</a>
+        <a href="<?= ROOT_URL ?>" class="nav__logo">Blogs.</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
                 <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
                 <li><a href="<?= ROOT_URL ?> contact.php">Contact</a></li>
-                <a href="<?= ROOT_URL ?>signin.php">Sign in</a></li>
-                <!--<li> <li class="nav__profile">
-                    <div class="avatar">
-                        <img src="./images/avatar1.png" alt="">
-                    </div>
-                    <ul>
-                        <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
-                        <li><a href="<?= ROOT_URL ?>logout.php">Log Out</a></li>
-                    </ul>
-                </li> -->
+                <?php if(isset($_SESSION['user-id'])) : ?>
+                    <li class="nav__profile">
+                        <div class="avatar">
+                            <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>" alt="">
+                        </div>
+                        <ul>
+                            <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
+                            <li><a href="<?= ROOT_URL ?>logout.php">Log Out</a></li>
+                        </ul>
+                    </li>
+                <?php else : ?>
+                    <a href="<?= ROOT_URL ?>signin.php">Sign in</a></li> </li>
+                <?php endif ?>
             </ul>
 
             <button id="open__nav-btn"><i class="uil uil-bars"></i></button>

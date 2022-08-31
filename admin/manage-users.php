@@ -22,30 +22,36 @@ include 'partials/header.php';
                             <h5>Manage Posts</h5>
                         </a>
                     </li> <!--End item 2-->
-                    <li>
-                        <a href="add-user.php">
-                            <i class="uil uil-user-plus"></i>
-                            <h5>Add User</h5>
-                        </a>
-                    </li> <!--End item 3-->
-                    <li>
-                        <a href="manage-users.php" class="active">
-                            <i class="uil uil-users-alt"></i>
-                            <h5>Manage User</h5>
-                        </a>
-                    </li> <!--End item 4-->
-                    <li>
-                        <a href="add-category.php">
-                            <i class="uil uil-edit"></i>
-                            <h5>Add Category</h5>
-                        </a>
-                    </li> <!--End item 5-->
-                    <li>
-                        <a href="manage-categories.php">
-                            <i class="uil uil-list-ul"></i>
-                            <h5>Manage Categories</h5>
-                        </a>
-                    </li> <!--End item 6-->
+
+                    <!-- removing the add & manage user/cateories priviliges if user is not admin (is_admin == 0)  -->
+                    <?php if(isset($_SESSION['user_is_admin'])): ?>
+
+                        <li>
+                            <a href="add-user.php">
+                                <i class="uil uil-user-plus"></i>
+                                <h5>Add User</h5>
+                            </a>
+                        </li> <!--End item 3-->
+                        <li>
+                            <a href="manage-users.php" class="active">
+                                <i class="uil uil-users-alt"></i>
+                                <h5>Manage User</h5>
+                            </a>
+                        </li> <!--End item 4-->
+                        <li>
+                            <a href="add-category.php">
+                                <i class="uil uil-edit"></i>
+                                <h5>Add Category</h5>
+                            </a>
+                        </li> <!--End item 5-->
+                        <li>
+                            <a href="manage-categories.php">
+                                <i class="uil uil-list-ul"></i>
+                                <h5>Manage Categories</h5>
+                            </a>
+                        </li> <!--End item 6-->
+
+                    <?php endif ?>
                 </ul>
             </aside>
             <main>

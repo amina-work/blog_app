@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'config/constants.php';
 
 //to not loose all the invalid form data & have them show up with the error

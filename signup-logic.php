@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'config/database.php';
 
 //get signup from data if signup button was clicked

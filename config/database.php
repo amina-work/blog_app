@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config/constants.php';
 
 //connect to the database
