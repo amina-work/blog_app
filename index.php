@@ -208,7 +208,7 @@ include 'partials/header.php'
             </article> <!--end item 8-->
             <article class="post">
                 <div class="post__thumbail">
-                    <img src="./images/post9.png" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="post__info">
                     <a class="category__button" href="category-posts.php">Science & Tecknology</a>
