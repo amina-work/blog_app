@@ -70,13 +70,15 @@ if(isset($_POST['submit'])){ //if the submit was clicked
     }
 
     //redirect to sign up page if errors exist
-    if($_SESSION['signup']){
+    if(isset($_SESSION['signup'])){
         //pass form data to signup page
+        $_SESSION['signup-data'] = $_POST; //send all the invalid input back to signup page
         header('location: ' . ROOT_URL . 'signup.php');
         die();
     } else{
         //insert new user to users table
         $insert_user_query = "INSERT INTO users (firstname, lastname, username, email, password, avatar, is_admin) VALUES('$firstname', '$lastname', '$username', '$email', '$hashed__password', '$avatar_name', 0)";//columns from the users table
+        $insert_user_result = mysqli_query($connection, $insert_user_query); //actually inserting data to the users table DB
 
         if(!mysqli_errno($connection)) {
             //redirect to login page sucess message

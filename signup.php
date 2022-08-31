@@ -1,6 +1,17 @@
 <?php
 session_start();
 require 'config/constants.php';
+
+//to not loose all the invalid form data & have them show up with the error
+$firstname = $_SESSION['signup-data']['firstname'] ?? null; //if there no data then the input remains null
+$lastname = $_SESSION['signup-data']['lastname'] ?? null;
+$username = $_SESSION['signup-data']['username'] ?? null;
+$email = $_SESSION['signup-data']['email'] ?? null;
+$createpassword = $_SESSION['signup-data']['createpassword'] ?? null;
+$confirmpassword = $_SESSION['signup-data']['confirmpassword'] ?? null;
+
+//delete signup data session
+unset($_SESSION['signup-data']);
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +23,7 @@ require 'config/constants.php';
     <title>Responsive Multipage Blog Application</title>
     
     <!-- SASS Style-->
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>styles/styles.css">
 
     <!-- Iconscout cdn-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
@@ -38,12 +49,12 @@ require 'config/constants.php';
                 </div>
             <?php endif ?> 
             <form class="form" action="<?= ROOT_URL?>signup-logic.php" enctype="multipart/form-data" method="POST">
-                <input type="text" name="firstname" placeholder="First Name">
-                <input type="text" name="lastname" placeholder="Last Name">
-                <input type="text" name="username" placeholder="Username">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="createpassword" placeholder="Create Password">
-                <input type="password" name="confirmpassword" placeholder="Confirm Password">
+                <input type="text" name="firstname" value="<?= $firstname ?>" placeholder="First Name">
+                <input type="text" name="lastname" value="<?= $lastname ?>" placeholder="Last Name">
+                <input type="text" name="username" value="<?= $username ?>" placeholder="Username">
+                <input type="email" name="email" value="<?= $email ?>" placeholder="Email">
+                <input type="password" name="createpassword" value="<?= $createpassword ?>" placeholder="Create Password">
+                <input type="password" name="confirmpassword" value="<?= $confirmpassword ?>" placeholder="Confirm Password">
                 <div class="form__control">
                     <label for="avatar">User Avatar</label>
                     <input type="file" name="avatar" id="avatar">
