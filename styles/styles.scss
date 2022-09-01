@@ -463,6 +463,23 @@ section{
 }
 
 /*================================================================================ SIGN UP PAGE ====================================================================================================*/
+.alert__message{
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: $cardBR2;
+}
+.alert__message.error{
+    background: $redLightClr;
+    color: $redClr;
+}
+.alert__message.success{
+    background: $greenLightClr;
+    color: $greenClr;
+}
+.alert__message.lg{ //center text of alert for empty alert
+    text-align: center;
+}
+
 .form-section{
     display: grid;
     place-items: center;

@@ -393,6 +393,26 @@ section {
 }
 
 /*================================================================================ SIGN UP PAGE ====================================================================================================*/
+.alert__message {
+  padding: 0.8rem 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.alert__message.error {
+  background: hsla(346deg, 87%, 46%, 0.15);
+  color: #da0f3f;
+}
+
+.alert__message.success {
+  background: hsla(156deg, 100%, 38%, 0.15);
+  color: #00c467;
+}
+
+.alert__message.lg {
+  text-align: center;
+}
+
 .form-section {
   display: grid;
   place-items: center;
