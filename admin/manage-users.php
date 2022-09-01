@@ -11,24 +11,38 @@ $users = mysqli_query($connection, $query);
 
     <!--Dashboard-->
     <section class="dashboard">
-        <?php if(isset($_SESSION['add-user-success'])) : ?>
+        <?php if(isset($_SESSION['add-user-success'])) : //show when user is added successfully ?>
             <div class="alert__message success container">
                 <p>
                     <?= $_SESSION['add-user-success'];
                         unset($_SESSION['add-user-success']); ?>
                 </p>
             </div>
-        <?php elseif (isset($_SESSION['edit-user-success'])) : ?>
+        <?php elseif (isset($_SESSION['edit-user-success'])) : //show when user is edited successfully?>
             <div class="alert__message success container">
                 <p>
                     <?= $_SESSION['edit-user-success'];
                         unset($_SESSION['edit-user-success']); ?>
                 </p>
             </div>
-        <?php elseif (isset($_SESSION['edit-user'])) : ?>
+        <?php elseif (isset($_SESSION['edit-user'])) : //show when user is NOT added successfully ?>
             <div class="alert__message error container">
                 <p>
                     <?= $_SESSION['edit-user'];
+                        unset($_SESSION['edit-user']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-user-success'])) : //show when user is deleted successfully ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['delete-user-success'];
+                        unset($_SESSION['delete-user-success']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-user'])) : //show when user is NOT deleted successfully ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['delete-user'];
                         unset($_SESSION['edit-user']); ?>
                 </p>
             </div>
