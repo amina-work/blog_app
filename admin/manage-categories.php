@@ -9,6 +9,49 @@ $categories = mysqli_query($connection, $query)
 
     <!--Dashboard-->
     <section class="dashboard">
+        <?php if(isset($_SESSION['add-category-success'])) : //show when category is added successfully ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['add-category-success'];
+                        unset($_SESSION['add-category-success']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['add-category'])) : //show when category is NOT added successfully ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['add-category'];
+                        unset($_SESSION['add-category']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['edit-category-success'])) : //show when category is edited successfully?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['edit-category-success'];
+                        unset($_SESSION['edit-category-success']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['edit-category'])) : //show when category is NOT edited successfully ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['edit-category'];
+                        unset($_SESSION['edit-category']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-category-success'])) : //show when category is deleted successfully ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['delete-category-success'];
+                        unset($_SESSION['delete-category-success']); ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-category'])) : //show when category is NOT deleted successfully ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['delete-category'];
+                        unset($_SESSION['edit-category']); ?>
+                </p>
+            </div>
+        <?php endif ?>
         <div class="container dashboard__container">
             <button id="show__sidebar-btn" class="sidebar__toggle"><i class="uil uil-angle-right-b"></i></button>
             <button id="hide__sidebar-btn" class="sidebar__toggle"><i class="uil uil-angle-left-b"></i></button>

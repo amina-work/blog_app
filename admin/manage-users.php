@@ -25,7 +25,7 @@ $users = mysqli_query($connection, $query);
                         unset($_SESSION['edit-user-success']); ?>
                 </p>
             </div>
-        <?php elseif (isset($_SESSION['edit-user'])) : //show when user is NOT added successfully ?>
+        <?php elseif (isset($_SESSION['edit-user'])) : //show when user is NOT edited successfully ?>
             <div class="alert__message error container">
                 <p>
                     <?= $_SESSION['edit-user'];
