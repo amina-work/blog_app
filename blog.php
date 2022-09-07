@@ -1,5 +1,15 @@
 <?php
-include 'partials/header.php'
+include 'partials/header.php';
+
+//fetch featured post from DB
+$featured_query = "SELECT * FROM posts WHERE is_featured=1";
+$featured_result = mysqli_query($connection, $featured_query);
+$featured = mysqli_fetch_assoc($featured_result);
+
+
+//fetch all posts from DB
+$query = "SELECT * FROM posts ORDER BY date_time DESC";
+$posts = mysqli_query($connection, $query);
 ?>
 
     <!--Search Bar-->
@@ -16,216 +26,54 @@ include 'partials/header.php'
     <!-- Posts Section -->
     <section class="posts">
         <div class="container posts__container">
+            <?php while($post = mysqli_fetch_assoc($posts)) : ?>
             <article class="post">
                 <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
+                    <img src="./images/<?= $post['thumbnail'] ?>">
                 </div>
                 <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
+                    <?php
+                    //Fetch category from category_id of post
+                    $category_id = $post['category_id'];
+                    $category_query = "SELECT * FROM categories WHERE id=$category_id";
+                    $category_result = mysqli_query($connection, $category_query);
+                    $category = mysqli_fetch_assoc($category_result);
+                    ?>
+                    <a class="category__button" href="<?= ROOT_URL ?>category-posts.php?id=<?= $category['id'] ?>"><?= $category['title'] ?></a>
+                    <h3 class="post__title"><a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h3>
+                    <p class="post__body"><?= substr($post['body'], 0, 150) ?>...</p>
                     <div class="post__author">
+                        <?php
+                        //fetch author from users table by using author_id
+                        $author_id = $post['author_id'];
+                        $author_query = "SELECT * FROM users WHERE id=$author_id";
+                        $author_result = mysqli_query($connection, $author_query);
+                        $author = mysqli_fetch_assoc($author_result);
+                        ?>
                         <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
+                            <img src="./images/<?= $author['avatar'] ?>" alt="">
                         </div>
                         <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
+                            <h5>By: <?= "{$author['firstname']} {$author['lastname']}" ?></h5>
+                            <small><?= date("M d, Y - H:i", strtotime($post['date_time'])) ?></small>
                         </div>
                     </div>
                 </div>
             </article> <!--end item 1-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 2-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 3-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 4-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 5-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 6-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 7-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 8-->
-            <article class="post">
-                <div class="post__thumbail">
-                    <img src="./images/post1.jpeg" alt="">
-                </div>
-                <div class="post__info">
-                    <a class="category__button" href="category-posts.php">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php">How to stop friends from sending voice messages all the time</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo distinctio eveniet itaque
-                        sunt nihil tempora nesciunt accusantium alias esse obcaecati.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar1.png" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: John Stone</h5>
-                            <small>June 10, 2022 - 7:40</small>
-                        </div>
-                    </div>
-                </div>
-            </article> <!--end item 9-->
+            <?php endwhile ?>
         </div>
     </section>
 
     <!--Categories-->
     <section class="category-buttons">
         <div class="container category-buttons__container">
-            <a href="category-posts.php" class="category__button">Wild Life</a>
-            <a href="category-posts.php" class="category__button">Travel</a>
-            <a href="category-posts.php" class="category__button">Art</a>
-            <a href="category-posts.php" class="category__button">Food</a>
-            <a href="category-posts.php" class="category__button">Music</a>
-            <a href="category-posts.php" class="category__button">Science & Tecknology</a>
+            <?php
+                $all_categories_query = "SELECT * FROM categories";
+                $all_categories = mysqli_query($connection, $all_categories_query);
+            ?>
+            <?php while($category = mysqli_fetch_assoc($all_categories)) : ?>
+                <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $category['id'] ?>" class="category__button"><?= $category['title'] ?></a>
+            <?php endwhile ?>
         </div>
     </section>
 
