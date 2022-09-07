@@ -1,4 +1,7 @@
 <?php
+
+use LDAP\Result;
+
 include 'partials/header.php';
 
 //fetch featured post from DB
@@ -14,12 +17,12 @@ $posts = mysqli_query($connection, $query);
 
     <!--Search Bar-->
     <section class="search-bar">
-        <form class="container search-bar__container" action="">
+        <form class="container search-bar__container" action="<?= ROOT_URL ?>search.php" method="GET">
             <div>
                 <i class="uil uil-search"></i>
-                <input type="search" name="" placeholder="Search">
+                <input type="search" name="search" placeholder="Search">
             </div>
-            <button type="submit" class="btn">Go</button>
+            <button type="submit" name="submit" class="btn">Go</button>
         </form>
     </section>
     
